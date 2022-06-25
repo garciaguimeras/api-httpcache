@@ -2,21 +2,19 @@
 
 La vieja librería httppool convertida a microservicio.
 
-## Endpoints
-
-### GET /
+## GET /
 
 Devuelve el contenido de un sitio web dada la URL. Si el contenido no se encuentra en caché, realiza la descarga; en caso de existir, siempre devuelve el contenido de la caché.
 
-#### Parámetros
+### Parámetros
 
 * q: URL que se desea consultar
 
-#### Ejemplo
+### Ejemplo
 
 * GET http://localhost:5000/q=https://google.com
 
-### GET /update
+## GET /update
 
 Actualiza el contenido de todas las URL que están guardadas en caché.
 
