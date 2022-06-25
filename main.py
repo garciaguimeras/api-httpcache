@@ -1,9 +1,12 @@
 import threading
-from flask import Flask, request
 import httpcache
+from flask import Flask, request
 
 app = Flask(__name__)
 
+@app.route("/health")
+def health():
+    return "v1.0.0", 200
 
 @app.route("/")
 def get():

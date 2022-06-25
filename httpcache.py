@@ -189,10 +189,8 @@ class sharedcache(object):
         content = ""
         f = open(filename)
         content = f.readlines()
-        if len(content) == 1:
-            content = content[0]
         f.close()
-        return content
+        return "".join(content)
 
     def save(self, key, value, save_read_access=True):
         filename = self.cache_dir + os.path.sep + hashlib.md5(key.encode("utf-8")).hexdigest()
